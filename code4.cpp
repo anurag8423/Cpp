@@ -1,3 +1,4 @@
+/*Includes manipulators and operators precedence info*/
 #include<iostream>
 #include<iomanip>
 using namespace std;
