@@ -8,5 +8,11 @@ int main(){
     cout<<"\n"<<num2<<"\n";
     cout<<num1+num2;
     cout<<"Addded this hello World message"<<endl;
+    cout<<"Now we see a pattern"<<endl;
+    for(int i=0;i<5;i++){
+        for(int j=0;j<i;j++)
+        cout<<" *";
+        cout<<endl;
+    }
     return 0;
 }
