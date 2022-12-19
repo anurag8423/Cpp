@@ -7,5 +7,6 @@ int main(){
     num2=num1*num1;
     cout<<"\n"<<num2<<"\n";
     cout<<num1+num2;
+    cout<<"Addded this hello World message"<<endl;
     return 0;
 }
