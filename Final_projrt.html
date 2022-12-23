@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c-pay</title>
+    <!-- <link rel="stylesheet" href="project.css"></link> -->
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+.A1 {
+    display:flex;
+    height: 12vh;
+    width:100vw;
+    background-color: rgb(48, 86, 211);
+    position:fixed;
+}
+
+.A2 {
+    color: white;
+    padding-top: 27vh;
+    text-align: center;
+    padding-right: 2vw;
+    font-size: larger;
+    text-decoration: none;
+}
+.A2:hover{
+    color: rgb(168, 168, 231);
+    font-size: 25px;
+}
+#aid2 {
+    display: inline-block;
+    padding-left: 9vw;
+    margin-top: 4vh;
+}
+
+#aid3 {
+    display: inline-block;
+    list-style: none;
+    margin-left: 6vw;
+}
+
+.A3 {
+    display: inline-block;
+    margin-left: 23vw;
+
+}
+
+.A4 {
+    font-size: larger;
+    color: white;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    text-decoration: none;
+}
+
+#A41:hover {
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    border-bottom-width: 10px;
+}
+#A42:hover{
+    color:rgb(191, 191, 222);
+    background-color: rgb(51, 51, 173);
+    font-size: 20px;
+}
+.B1{
+    background-color: rgb(48, 86, 211);
+    color: white;
+    text-align: center;
+}
+.B2{
+    font-size: 23px;
+    color: rgb(221, 221, 230)
+}
+#B11{
+    height: 35px;
+}
+.B3{
+font-size: 50px;
+}
+#B31{
+    padding-top: 25vh;
+}
+#B12{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+#B12:hover{
+    border-style: solid;
+    border-color: rgb(32, 32, 117);
+    background-color: rgb(32, 32, 117);
+    font-size: 25px;
+}
+#C11{
+    font-size: 20px;
+    padding-left: 8vw;
+    color: blue;
+}
+#C12{
+    font-size: 50px;
+    padding-left: 8vw;
+    color: rgb(0, 0, 0);
+}
+.C2{
+    padding-left: 8vw;
+    color: rgb(108, 97, 97);
+    font-size: 23px;
+}
+.D1{
+    padding: 8vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.D2,.D3,.D4,.D5{
+    height: 40vh;
+    width: 20vw;
+    /* background-color: aqua; */
+}
+.D6{
+    height: 15px;
+}
+.D7{
+    font-size: 23px;
+    color: black;
+}
+.D8{
+    font-size: 20px;
+    color: rgb(175, 150, 150);
+}
+.D9{
+    height:8vh;
+}
+.D10{
+    font-size:23px;
+    color: rgb(121, 114, 114);
+}
+.E1{
+    display: flex;
+    flex-direction: row;
+    height: 120vh;
+    background-color: rgb(233, 244, 244);
+}
+.E2{
+    margin-left: 10vw;
+    margin-top: 10vh;
+    padding-left: 2vw;
+    width: 40vw;
+    height:100vh;
+    background-color: white;
+}
+#E21{
+    padding: 1vh;
+    color:white;
+    background-color: blue;
+    font-size: large;
+    width: 5vw;
+}
+.E3{
+    padding-top: 10vh;
+}
+.E4{
+    font-size: 42px;
+    color: black;
+
+}
+.E5{
+    font-size:20px;
+    color: rgba(75, 71, 71, 0.46)
+}
+#E22{
+    padding: 1vh;
+    color: white;
+    background-color: rgb(22, 22, 181);
+    font-size:large;
+    width:6vw;
+}
+#E22:hover{
+    background-color: rgb(58, 58, 214);
+}
+.F1{
+    margin-top: 20vh;
+    text-align: center;
+}
+#F11{
+    font-size: 22px;
+    color:rgb(73, 60, 242);
+}
+#F12{
+    font-size: 40px;
+    color:black;
+}
+#C21,#C22{
+    padding-right: 6vw;
+}
+.G1{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 20vh;
+}
+.G2,.G4{
+    margin-top:2vh;
+    height: 77vh;
+    width:26vw;
+    border:solid;
+    border-radius: 12px;
+    border-width: 0.9px;
+    border-color: black;
+}
+.G2{
+    margin-left: 11vw;
+}
+.G4{
+    margin-right:11vw;
+}
+.G3{
+    height:81vh;
+    width:26vw;
+    border-radius: 12px;
+    border-color:blue;
+    border-width: 0.9px;
+    background: linear-gradient(0deg,skyblue,blue);
+    background-blend-mode: brighten;
+}
+#G21{
+    margin-top: 6vh;
+    font-size: 20px;
+    margin-bottom: 4vh;
+    color: rgb(65, 55, 55);
+}
+#G22{
+    color:rgb(72, 72, 233);
+    font-size: 30px;
+    font-style: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.G5{
+    color: rgb(108, 97, 97);
+    font-size: 20px;
+}
+#G23{
+    width:10vw;
+    color:rgb(52, 52, 250);
+    margin-left: 6vw;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-width: 0.01px;
+    font-size: 20px;
+    border-radius:2vw ;
+    border-color: skyblue;
+    border: solid;
+}
+#G23:hover{
+    color:white;
+    background-color: rgb(52, 52, 250);
+}
+#G31{
+    color:rgb(97, 97, 239);
+    width:9vw;
+    background-color: white;
+    border-radius: 2vw;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    margin-left:7.5vw;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#G32{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 3vh;
+}
+#G33{
+    color:white;
+    font-size: 30px;
+    font-style: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.G6{
+    color: white;
+    font-size: 20px;
+}
+#G34{
+    width:10vw;
+    color:rgb(61, 61, 222);
+    margin-left: 6vw;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-width: 0.01px;
+    font-size: 20px;
+    border-radius:2vw ;
+    background-color: white;
+    border: solid;
+}
+#G34:hover{
+    color: white;
+    background-color:rgb(7, 7, 95) ;
+}
+.H1{
+    height:120vh;
+    width:100vw;
+    background-color:rgb(228, 249, 249);
+    margin-bottom: 23vh;
+}
+#H11{
+    color:rgb(12, 12, 171);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align:center;
+}
+#H12{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 2vw;
+    text-align:center;
+}
+#H13,#H14{
+    text-align: center;
+}
+.H2{
+    margin-bottom: 3vh;
+    margin-top: 6vh;
+    display:flex;
+    flex-direction: row;
+}
+.H3,.H4{
+    width:38vw;
+    height:7vw;
+    margin-left:4vw;
+    background-color: white;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: row;
+}
+.H3{
+    margin-left: 10vw;
+}
+#H31,#H41{
+    justify-items: left;
+    margin:2.4vw;
+    width:2.1vw;
+    display: inline-block;
+}
+
+.H5{
+    padding-left: 2vw;
+    color: rgb(108, 97, 97);
+    font-size: 23px;
+}
+#H32,#H42{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:2.6vw;
+    width:32.1vw;
+}
+.I1{
+    text-align: center;
+}
+#I11{
+    font-family: 'Gill Sans MT';
+    font-size: 20px;
+    color:rgb(50, 50, 232);
+}
+#I12{
+    font-family: 'Gill Sans MT';
+    font-size: 50px;
+    color: black;
+}
+#I13,#I14{
+    padding-left: 0vw;
+}
+.J1{
+    margin-left:8.5vw;
+    margin-right:8.5vw;
+    margin-top: 5vw;
+    background: linear-gradient(white,rgb(185, 215, 215),white);
+    display: flex;
+    flex-direction: row;
+    height:40vh;
+}
+.J2,.J3,.J4{
+    margin-top: 4vh;;
+    width:24vw;
+    height:32vh;
+    background-color: white;
+    color:rgb(108, 97, 97);
+    font-size: large;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: larger;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Gill Sans MT';
+}
+#J21{
+    width:21vw;
+}
+.J5{
+    padding-top: 2vh;
+    font-size: medium;
+    color:rgb(121, 114, 114);
+    padding-left: 8.5vw;
+    padding-bottom: 3vh;
+}
+#J51{
+    padding-left:8.5vw;
+    height:7vh;
+    padding-bottom: 4vh;
+}
+.K1{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin:4vw
+}
+.K2,.K3,.K4,.K5{
+    width:10vw;
+    margin:3vw;
+    text-align: center;
+}
+#k21{
+    width:4vw;
+    padding:2vw;
+}
+#K22{
+    font-family: 'Gill Sans MT';
+    font-size: 20px;
+    padding-bottom: 2vh;
+}
+#K23{
+    font-family: 'Gill Sans MT';
+    color: rgb(121, 114, 114);
+    font-size: 18px;
+    padding-bottom: 3vh;
+}
+.L1{
+    height:56vh;
+    background-color: rgb(236, 247, 243);
+    padding-left: 10vw;
+    padding-right: 3vw;
+    display: flex;
+}
+#L11{
+    width:55vw;
+    height: 40vh;
+    padding-bottom:8vh;
+}
+#L12{
+    width: 50vw;
+    height:90vh;
+    margin-top: 5vh;
+    background-color: white;
+    margin-left: 30vw;
+}
+.L2{
+    display:inline-flex;
+    margin-left: 7vw;
+}
+#L21,#L22{
+    width:26vw;
+    height:40vh;
+    margin:1vw;
+}
+#L21{
+    font-family: 'Gill sans MT';
+    font-size: 22px;
+}
+#L22{
+    font-family: 'Gill sans MT';
+    font-size: 22px;
+}
+#L13{
+    margin-top:20vh;
+    margin-bottom:5vh;
+    font-family: 'Gill Sans MT';
+    font-size: 21px;
+}
+.L3{
+    font-family: 'Gill Sans MT';
+    font-size: 40px;
+    color:black
+}
+.L4{
+    margin-left:3vw;
+    margin-bottom:2vh;
+    margin-top: 2vh;
+}
+.L5{
+    width:20vw;
+    height:6vh;
+    border-radius: 10px;
+    margin-left:3vw;
+    margin-bottom:2vh;
+    margin-top: 2vh;
+    font-size: 17px;
+}
+.L6{
+    margin-top: 4vh;
+    font-size: 20px;
+    width:12vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    margin-left:3vw;
+    color: white;
+    background-color: rgb(47, 47, 233);
+    border-radius: 10px;
+}
+.L6:hover{
+    background-color: rgb(5, 5, 70);
+}
+.L7{
+    font-size: 18px;
+    font-family: 'Gill Sans MT';
+    color: rgb(121, 114, 114);
+    margin-left: 2.1vw;
+}
+.M1{
+    background-image: url('logo23.jpeg');
+    height:45vh;
+    padding-top: 20vh;
+    background-size: cover;
+    padding-left: 5vw;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    display:flex;
+    flex-direction: row;
+}
+.M2{
+    width:17.5vw;
+    height:40vh;
+    margin: 1vw;
+}
+.M3,.M4,.M5{
+    width:15vw;
+    height:40vh;
+    margin:1vw;
+}
+.M6{
+    width:20vw;
+    height:40vh;
+    margin:1vw;
+}
+.M7{
+    font-size: 22px;
+    margin-bottom: 4vh;
+}
+.M8{
+    margin-bottom: 2.5vh;
+    font-size: 20px;
+}
+.M8:hover{
+    color:rgb(33, 33, 241);
+}
+.M10{
+    width:8vw;
+    padding-right: 1.5vh;
+}
+#M61{
+    height:2px;
+    background-color: white;
+}
+.N2{
+    background-image: url('logo23.jpeg');
+    height:15vh;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.M12{
+    margin:2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color:white;
+}
+.M12:hover{
+    color:rgb(33,33,241);
+}
+.N1{
+    padding-left: 0vw;
+    display:inline-flex;
+    list-style-type:none;
+
+}
+.N3{
+    display:inline-flex;
+    list-style-type:none;
+    padding-left: 24vw;
+}
+#N31,#N32{
+    margin-top:2vw;
+    margin-bottom:2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color:white;
+}
+#N32{
+    color:rgb(33, 33, 241);
+    text-decoration: none;;
+    margin-left: 0.5vh;
+}
+#N32:hover{
+    text-decoration: underline;
+}
+</style>
+<body>
+    <div class="A1">
+        <a id="aid2" ><img src="logo.jpg" alt="logo" height="50vh"></a>
+        <div>
+            <br>
+            <br>
+            <ul id="aid3">
+                <a class="A2" href="/home/">Home</a>
+                <a class="A2" href="/About/">About</a>
+                <a class="A2" href="/pricing/">Pricing</a>
+                <a class="A2" href="/team/">Team</a>
+                <a class="A2" href="/contact/">Contact</a>
+                <a class="A2" href="/pages/">Pages</a>
+            </ul>
+            <ul class="A3">
+                <a class="A4" id="A42" href="/sign in/"> Sign In</a>
+                <a class="A4" id="A41" href="/sign up/"> Sign Up</a>
+            </ul>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="B1">
+        <div class="B3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" id="B31"><b>Open-Source Web Template for</b></div>
+        <div class="B3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>SaaS, Startups, Apps, and More</b></div>
+        <div id="B11"></div>
+        <div class="B2">Multidisciplinary Web Template Built with your Favorite</div>
+        <div class="B2">Technology - HTML Bootstrap, Tailwind and React NextJS.</div>
+        <br><br><br><br>
+        <a href="/Github/" target="_main" id="B12"><b>Start on Github &RightArrowBar;</b></a>
+        <br><br><br><br>
+        <img id="B13" src="logo2.jpg" alt="Logo 2">
+        <br><br><br><br>
+        <img src="logo3.jpg" alt="Logo 3">
+    </div>
+    <div class="C1">
+        <br><br><br><br><br><br><br>
+        <div id="C11" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Features</b></div>
+        <br>
+        <div id="C12" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Main Features of Play</b></div>
+        <br>
+        <div class="C2">There are many variations of passages of Lorem Ipsum available</div>
+        <div class="C2">but the majority have suffered alteration in some form</div>
+    </div>
+    <div class="D1">
+        <div class="D2">
+            <img src="logo4.jpg" alt="logo 4">
+            <div class="D6"></div>
+            <div class="D7"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Free and Open-Source</b></div>
+            <div class="D6"></div>
+            <p class="D8">Lorem Ipsum is simply dummy text of the printing industry</p>
+            <div class="D9"></div>
+            <p class="D10" ><b>Learn more</b></p>
+        </div>
+        <div class="D3">
+            <img src="logo5.jpg" alt="logo 5">
+            <div class="D6"></div>
+            <div class="D7"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Multipurpose Template</b></div>
+            <div class="D6"></div>
+            <p class="D8">Lorem Ipsum is simply dummy text of the printing industry</p>
+            <div class="D9"></div>
+            <p class="D10" >Learn more</p>
+        </div>
+        <div class="D4">
+            <img src="logo6.jpg" alt="logo 6">
+            <div class="D6"></div>
+            <div class="D7"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>High-quality Design</b></div>
+            <div class="D6"></div>
+            <p class="D8">Lorem Ipsum is simply dummy text of the printing industry</p>
+            <div class="D9"></div>
+            <p class="D10" >Learn more</p>
+        </div>
+        <div class="D5">
+            <img src="logo6.jpg" alt="logo 6">
+            <div class="D6"></div>
+            <div class="D7"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>All esential elements</b></div>
+            <div class="D6"></div>
+            <p class="D8">Lorem Ipsum is simply dummy text of the printing industry</p>
+            <div class="D9"></div>
+            <p class="D10" >Learn more</p>
+        </div>
+    </div>
+    <div class="E1">
+        <div class="E2">
+            <div style="height:12vh"></div>
+            <div style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" id="E21">About Us</div>
+            <div style="height:8vh"></div> 
+            <div class="E4" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" ><b>Brilliant Toolkit to Build</b></div>
+            <div class="E4" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>Nextgen Website Faster</b></div>
+            <div style="height:7vh"></div>
+            <div class="E5">The "main" thrust is focus on educating attendees on how to</div>
+            <div class="E5">best protect highly vulnerable bussiness applications with</div>
+            <div class="E5">interacting panel discussions and round tables led by subject</div>
+            <div class="E5">matter experts</div>
+            <div style="height:7vh"></div>
+            <div class="E5">The "main" thrust is focus on educating attendees on how to</div>
+            <div class="E5">best protect highly vulnerable bussiness applications with</div>
+            <div class="E5">interactive panels</div>
+            <div style="height:8vh"></div>
+            <span id="E22">Learn More</span>
+        </div>
+        <div class="E3"><img src="logo8.jpg" alt="Logo 8" height="703vh"></div>
+    </div>
+    <div class="F1">
+        <div id="F11" ><b>Pricing Table</b></div>
+        <div style="height:3vh"></div>
+        <div style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" id="F12"><b>Our Pricing Plan</b></div>
+        <br>
+        <div class="C2" id="C21">There are many variations of passages of Lorem Ipsum available</div>
+        <div class="C2" id="C22">but the majority have suffered alteration in some form</div>
+    </div>
+    <div style="height:17vh"></div>
+    <div class="G1">
+        <div class="G2">
+           <div id="G21" style="font-family:'Gill Sans'"><b>STARTING FROM</b></div>
+           <div id="G22"><b>$ 19.99/mo</b></div>
+           <div style="height:8vh"></div>
+           <div class="G5">1 user</div>
+           <div style="height:2vh"></div>
+           <div class="G5">All UI components</div>
+           <div style="height:2vh"></div>
+           <div class="G5">Lifetime access</div>
+           <div style="height:2vh"></div>
+           <div class="G5">Free updates</div>
+           <div style="height:2vh"></div>
+           <div class="G5">Use on 1(one) project</div>
+           <div style="height:2vh"></div>
+           <div class="G5">3 months support</div>
+           <div style="height:8vh"></div>
+           <div id="G23">Purchase Now</div>
+        </div>
+        <div class="G3">
+            <div id="G31">POPULAR</div>
+            <p id="G32"><b>STARTING FROM</b></p>
+            <p id="G33"><b>$ 19.99/mo</b></p>
+            <div style="height:8vh"></div>
+           <div class="G6">5 user</div>
+           <div style="height:2vh"></div>
+           <div class="G6">All UI components</div>
+           <div style="height:2vh"></div>
+           <div class="G6">Lifetime access</div>
+           <div style="height:2vh"></div>
+           <div class="G6">Free updates</div>
+           <div style="height:2vh"></div>
+           <div class="G6">Use on 1(one) project</div>
+           <div style="height:2vh"></div>
+           <div class="G6">4 months support</div>
+           <div style="height:8vh"></div>
+           <div id="G34">Purchase Now</div>
+        </div>
+        <div class="G4">
+            <div id="G21" style="font-family:'Gill Sans'"><b>STARTING FROM</b></div>
+           <div id="G22"><b>$ 70.99/mo</b></div>
+           <div style="height:8vh"></div>
+           <div class="G5">1 user</div>
+           <div style="height:2vh"></div>
+           <div class="G5">All UI components</div>
+           <div style="height:2vh"></div>
+           <div class="G5">Lifetime access</div>
+           <div style="height:2vh"></div>
+           <div class="G5">Free updates</div>
+           <div style="height:2vh"></div>
+           <div class="G5">Use on unlimited project</div>
+           <div style="height:2vh"></div>
+           <div class="G5">4 months support</div>
+           <div style="height:8vh"></div>
+           <div id="G23">Purchase Now</div>
+        </div>
+    </div>
+    <div class="H1">
+        <div style="height:12vh"></div>
+        <div id="H11"><b>FAQ</b></div>
+        <br>
+        <div id="H12"><b>Any Questions? Answered</b></div>
+        <br>
+        <div class="H5" id="H13">There are many variations of passages of Lorem Ipsum available</div>
+        <div class="H5" id="H14">but the majority have suffered alteration in some form</div>
+        <br><br>
+        <div class="H2">
+            <div class="H3">
+                <img id="H31" src="logo9.jpg" alt="Logo 9">
+                <span id="H32"><b>How to use TailGrids?</b></span>
+            </div>
+            <div class="H4">
+                <img id="H41" src="logo9.jpg" alt="Logo 9">
+                <span id="H42"><b>Can I use this template for commercial project?</b></span>
+            </div>
+        </div>
+        <div class="H2">
+            <div class="H3">
+                <img id="H31" src="logo9.jpg" alt="Logo 9">
+                <span id="H32"><b>How to download icons from linelcons?</b></span>
+                <br>
+            </div>
+            <div class="H4">
+                <img id="H41" src="logo9.jpg" alt="Logo 9">
+                <span id="H42"><b>Do you have plan to releasing Play Pro?</b></span>
+            </div>
+        </div>
+        <div class="H2">
+            <div class="H3">
+                <img id="H31" src="logo9.jpg" alt="Logo 9">
+                <span id="H32"><b>Is GrayGrids part of UIdeck?</b></span>
+                <br>
+            </div>
+            <div class="H4">
+                <img id="H41" src="logo9.jpg" alt="Logo 9">
+                <span id="H42"><b>Where and how to host this template?</b></span>
+            </div>
+        </div>
+    </div>
+    <div class="I1">
+        <div id="I11"><b>Testimonials</b></div>
+        <br>
+        <div id="I12"><b>What our Client Say</b></div>
+        <br>
+        <div class="C2" id="I13">There are many variations of passages of Lorem Ipsum available</div>
+        <div class="C2" id="I14">but the majority have suffered alteration in some form</div>
+        <div style="height:3vh"></div>
+    </div>
+        <div class="J1">
+            <div class="J2">
+                <img src="logo10.jpg" alt="Logo 10">
+                <div style="height:2vh"></div>
+                "Our members are so impressed. It's intuitive. It's clean. It's distraction free.If you're building a community."
+                <div style="height:2vh"></div>
+                <span ><img src="logo11.jpg"></span>
+                <span ><pre><b style="color:black">Sabo Masies</b>
+Founder @Rolex</pre></span>
+<div style="height: 3vh;"></div>
+            </div>
+            <div class="J3">
+                <img src="logo10.jpg" alt="Logo 10">
+                <div style="height:2vh"></div>
+                "Our members are so impressed. It's intuitive. It's clean. It's distraction free.If you're building a community."
+                <div style="height:2vh"></div>
+                <span ><img src="logo12.jpg"></span>
+                <span ><pre><b style="color:black">Margin Gesmu</b>
+Founder @UI Hunter</pre></span>
+<div style="height: 3vh;"></div>
+            </div>
+            <div class="J4">
+                <img src="logo10.jpg" alt="Logo 10">
+                <div style="height:2vh"></div>
+                "Our members are so impressed. It's intuitive. It's clean. It's distraction free.If you're building a community."
+                <div style="height:2vh"></div>
+                <span ><img src="logo13.jpg"></span>
+                <span ><pre><b style="color:black">William Smith</b>
+Founder @ Trorex</pre></span>
+<div style="height: 3vh;"></div>
+            </div>
+        </div>
+        <div class="J5">Some Of Our Clients -</div>
+        <img  id="J51" src="logo14.jpg" alt="Logo 14">
+        <div style="height:17vh"></div>
+        <div class="I1">
+            <div id="I11"><b>Our Team</b></div>
+            <br>
+            <div id="I12"><b>Meet Our Team</b></div>
+            <br>
+            <div class="C2" id="I13">There are many variations of passages of Lorem Ipsum available</div>
+            <div class="C2" id="I14">but the majority have suffered alteration in some form</div>
+            <div style="height:3vh"></div>
+        </div>
+        <div class="K1">
+            <div class="K2">
+                <img id="K21" src="logo15.jpg">
+                <div id="K22"><b>Adveen Desuza</b></div>
+                <div id="K23">UI Designer</div>
+                <img src="logo19.jpg" alt="Logo 19">
+            </div>
+            <div class="K3">
+                    <img id="K21" src="logo16.jpg">
+                    <div id="K22"><b>Jezmin Uniya</b></div>
+                    <div id="K23">Product Designer</div>
+                    <img src="logo19.jpg" alt="Logo 19">
+            </div>
+            <div class="K4">
+                    <img id="K21" src="logo17.jpg">
+                    <div id="K22"><b>Andreio Gloree</b></div>
+                    <div id="K23">App Developer</div>
+                    <img src="logo19.jpg" alt="Logo 19">
+            </div>
+            <div class="K5">
+                    <img id="K21" src="logo18.jpg">
+                    <div id="K22"><b>Jackie Sanders</b></div>
+                    <div id="K23">UI Designer</div>
+                    <img src="logo19.jpg" alt="Logo 19">
+            </div>
+        </div>
+        <div class="L1">
+                <div id="L11">
+                    <div id="L13">CONTACT US</div>
+                    <div class="L3"><b>Let's talk about</b></div>
+                    <div class="L3"><b>Love to hear from you!</b></div>
+                </div>
+                <div id="L12">
+                    <div style="height:7vh"></div>
+                    <form action="/action.php">
+                        <div class="L4">Full Name*</div>
+                        <input class="L5" type="text" placeholder="  Adam Gelius">
+                        <div class="L4">Email*</div>
+                        <input class="L5" type="email" placeholder="  example@yourmail.com">
+                        <div class="L4">Phone Number*</div>
+                        <input class="L5" type="tel" placeholder="  +885 1254 5211 552">
+                        <div class="L4">Message*</div>
+                        <input class="L5" input="textarea" placeholder="  Enter your message">
+                        <input class="L6" type="submit" placeholder=" Send Message">
+                    </form>
+                </div>
+        </div>
+        <div class="L2">
+            <div id="L21">
+                <div style="height:8vh"></div>
+                <span><img src="logo20.jpg" alt="Logo 20" height="30vh"></span>
+                <b>Our Location</b>
+                <div style="height:4vh"></div>
+                <div class="L7">401 Broadway, 24th Floor, Orchard</div>
+                <div class="L7">Cloud View, London</div>
+            </div>
+            <div id="L22">
+                <div style="height:8vh"></div>
+                <span><img src="logo21.jpg" alt="Logo 20" height="30vh"></span>
+                <b> How Can We Help?</b>
+                <div style="height:4vh"></div>
+                <div class="L7">info@yourdomain.com</div>
+                <div class="L7">Contact@yourdomain.com</div>
+            </div>
+        </div>
+        <div style="height:15vh"></div>
+        <div class="M1">
+            <div class="M2">
+                <img src="logo22.svg">
+                <div style="height:4vh"></div>
+                <div>We create digital experiences for</div>
+                <div>brands and companies by using</div>
+                <div>technology.</div>
+                <div style="height:4vh"></div>
+                <img src="logo24.jpg" height="25vh">
+            </div>
+            <div class="M3">
+                <div class="M7"><b>About Us</b></div>
+                <div class="M8">Home</div>
+                <div class="M8">Features</div>
+                <div class="M8">About</div>
+                <div class="M8">Testimonials</div>
+            </div>
+            <div class="M4">
+                <div class="M7"><b>Features</b></div>
+                <div class="M8">How it works</div>
+                <div class="M8">Privacy policy</div>
+                <div class="M8">Terms of Service</div>
+                <div class="M8">Refund policy</div>
+            </div>
+            <div class="M5">
+                <div class="M7"><b>Our Products</b></div>
+                <div class="M8">Linelcons</div>
+                <div class="M8">Ecommerce HTML</div>
+                <div class="M8">Aryo UI</div>
+                <div class="M8">PlainAdmin</div>
+            </div>
+            <div class="M6">
+                <div class="M7"><b>Partners</b></div>
+                <div class="M9">
+                    <span><img class="M10" src="LOGO1.svg" ></span>
+                    <span><img class="M10" src="LOGO2.svg" ></span>
+                </div>
+                <div style="height:3vh"></div>
+                <div class="M9">
+                    <span><img class="M10" src="LOGO3.svg"></span>
+                    <span><img class="M10" src="LOGO4.svg"></span>
+                </div>
+                <div style="height:3vh"></div>
+                <div class="M9">
+                    <span><img class="M10" src="LOGO5.svg"></span>
+                    <span><img class="M10" src="LOGO6.svg"></span>
+                </div>
+            </div>
+        </div>
+        <div id="M61"></div>
+        <div class="N2">
+            <ul class="N1">
+                <li class="M12">Privacy policy</li>
+                <li class="M12">Legal notice</li>
+                <li class="M12">Terms of service</li>
+            </ul>
+            <ul class="N3">
+                <li id="N31">Designed and Developed by</li>
+                <li id="N32">TailGrids and UIdeck</li>
+            </ul>
+        </div>
+</body>
+</html>
